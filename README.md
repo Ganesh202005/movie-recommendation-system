@@ -1,98 +1,120 @@
-Movie Recommendation & Purchase System
-This is a full-stack Streamlit web application for movie recommendations powered by The Movie Database (TMDb) API, integrated with a QR-based payment system for purchasing and unlocking movies.
+# 🎬 Movie Recommendation System
 
-Built by a BCA student from Mumbai passionate about film production, screenwriting, and tech projects.
-​
+A web application built with **Streamlit** that recommends movies using **The Movie Database (TMDb) API**. Users can search for movies, view detailed information, explore cast members, and get personalized recommendations.
 
-Features
-User authentication with login/signup screen.
-​
+Built by a **BCA student from Mumbai** passionate about film production, screenwriting, and technology projects.
 
-Search movies by name, fetch details (poster, overview, IMDb rating, trailer, cast).
-​
+---
 
-View top 5 cast members with expandable actor bios.
-​
+# 🚀 Features
 
-Get personalized recommendations based on selected movie.
-​
+- User authentication with **Login / Signup system**
+- Search movies by name and view:
+  - Poster
+  - Overview
+  - IMDb rating
+  - Trailer
+  - Cast details
+- View **Top 5 cast members** with expandable actor biographies
+- Get **movie recommendations** based on the selected movie
+- Sidebar navigation for **Bollywood / Hollywood movie browsing**
+- Responsive and interactive UI built with **Streamlit**
 
-Sidebar navigation for Bollywood/Hollywood streams and purchase pages.
-​
+---
 
-QR code generation for UPI payments (e.g., Paytm) with real-time polling for confirmation.
+# 📂 File Structure
 
-SQLite database to store purchased movies; play unlocked videos post-payment.
-​
+| File | Description |
+|-----|-------------|
+| `main.py` | Core application with login, search, recommendations, and TMDb API integration |
+| `login.py` | Handles user authentication |
+| `bollywood.py` | Displays Bollywood movie recommendations |
 
-Auto-refresh and responsive UI with custom CSS styling.
+---
 
-File Structure
-main.py - Core app: login, search, recommendations, TMDb integration, sidebar menu.
-​
+# 🛠 Tech Stack
 
-page.py - Movie purchase page: QR popup, payment polling, video unlock.
-​
+**Frontend / Backend**
+- Streamlit
 
-qr.py - QR code generator for payment links.
-​
+**API**
+- TMDb API (movie details, cast, trailers)
 
-payment.py - Payment status verification with retry logic.
-​
+**Database**
+- SQLite
 
-Note: Additional files like login.py, bollywood.py referenced but not attached.
-​
+**Libraries**
+- requests
+- streamlit
+- pandas
 
-Tech Stack
-Frontend/Backend: Streamlit
+---
 
-APIs: TMDb (movies, cast, trailers), Google Apps Script (payment verify)
+# ⚙️ Setup Instructions
 
-Database: SQLite
+### 1️⃣ Clone the Repository
 
-Payments: UPI QR (Paytm)
+```bash
+git clone https://github.com/yourusername/movie-recommendation-system.git
+cd movie-recommendation-system
+```
 
-Libraries: requests, qrcode[pil], streamlit-autorefresh, base64
+### 2️⃣ Install Dependencies
 
-Quick Setup
-Clone repo and install dependencies:
+```bash
+pip install streamlit requests pandas
+```
 
-text
-pip install streamlit requests qrcode[pil] streamlit-autorefresh
-Get TMDb API key from themoviedb.org and replace in main.py.
-​
+### 3️⃣ Get TMDb API Key
 
-Update payment API URL in page.py (e.g., your Google Script endpoint).
-​
+Create a free API key from:
 
-Run the app:
+https://www.themoviedb.org/
 
-text
+Replace the API key in `main.py`.
+
+```python
+TMDB_API_KEY = "your_api_key"
+```
+
+---
+
+# ▶️ Run the Application
+
+```bash
 streamlit run main.py
-Access at http://localhost:8501. Login, search movies, purchase via QR.
+```
 
-API Keys & Config
-TMDb: Replace 93a7261b8594ec9d691f6bd21a977afc in main.py.
-​
+Open in browser:
 
-Payment: Update apiurl in page.py; test with your endpoint returning {"code": 200} on success.
-​
+```
+http://localhost:8501
+```
 
-Screenshots
-Demo shows movie search, details, cast, recommendations, and QR payment popup.
+---
 
-Future Plans
-Integrate full Bollywood/Hollywood catalogs.
+# 📸 Screenshots
 
-Add user watchlists and ratings.
+Application includes:
 
-Deploy to Streamlit Cloud/Hugging Face Spaces.
+- Movie search interface
+- Movie details page
+- Cast information
+- Movie recommendation system
 
-Enhance with ML-based recommendations.
+*(Add screenshots here later)*
 
-Contributing
-Fork, PR improvements! Focus on security, error handling, or new features like subscriptions.
-​
+---
 
-License
-MIT License. Free to use/modify.
+# 🔮 Future Improvements
+
+- Add **machine learning based recommendations**
+- Implement **watchlists**
+- Add **user ratings and reviews**
+- Deploy on **Streamlit Cloud**
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.

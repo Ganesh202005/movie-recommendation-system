@@ -28,15 +28,18 @@ SQLite database to store purchased movies; play unlocked videos post-payment.
 Auto-refresh and responsive UI with custom CSS styling.
 
 File Structure
-File	Description
-main.py	Core app: login, search, recommendations, TMDb integration, sidebar menu.
+main.py - Core app: login, search, recommendations, TMDb integration, sidebar menu.
 ​
-page.py	Movie purchase page: QR popup, payment polling, video unlock.
+
+page.py - Movie purchase page: QR popup, payment polling, video unlock.
 ​
-qr.py	QR code generator for payment links.
+
+qr.py - QR code generator for payment links.
 ​
-payment.py	Payment status verification with retry logic.
+
+payment.py - Payment status verification with retry logic.
 ​
+
 Note: Additional files like login.py, bollywood.py referenced but not attached.
 ​
 
